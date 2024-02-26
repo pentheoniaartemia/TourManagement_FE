@@ -1,0 +1,299 @@
+.booking-tour--body {
+    margin-top: 72px;
+    padding: 40px 80px;
+    display: flex;
+}
+
+/* User registeration */
+
+.booking-tour--body .input-information--section {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.booking-tour--body .input-information--section .main-title {
+    color: #081B46;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.input-information--section .register-information--input {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.input-information--section .more-request--container .title,
+.input-information--section .customer-information--container .title,
+.input-information--section .customer-count--container .title,
+.input-information--section .register-information--input .title {
+    color: #081B46;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-information--section .register-information--input .input-form--container {
+    background-color: #f9f9f9;
+    padding: 20px 0 20px 35px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.register-information--input .input-form--container .input-form--item {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.input-form--container .input-form--item p {
+    margin-bottom: 5px;
+}
+
+.input-form--container .input-form--item input {
+    padding: 6px 6px 6px 10px;
+    width: 90%;
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Count Customer */
+
+.input-information--section .customer-count--container {
+    margin-bottom: 30px;
+}
+
+.customer-count--container .customer-quantity--container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.booking-tour--body .customer-count--container .customer-quantity--container .customer-type-quantity--item {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+.customer-quantity--container .customer-type-quantity--item:nth-child(4),
+.customer-quantity--container .customer-type-quantity--item:nth-child(2) {
+    margin-left: 30px;
+}
+
+.customer-type-quantity--item .customer-type .customer-type-name {
+    color: #081B46;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.customer-type-quantity--item .customer-type .age {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+.customer-type-quantity--item .quantity-customer {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.customer-type-quantity--item .quantity-customer p {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.customer-type-quantity--item .quantity-customer .plus,
+.customer-type-quantity--item .quantity-customer .minor {
+    border: 2px solid #081B46;
+    border-radius: 50%;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.customer-type-quantity--item .quantity-customer .count {
+    margin: 0 10px;
+}
+
+/* Customer information */
+
+.input-information--section .customer-information--container {
+    width: 100%;
+}
+
+.customer-information--container .customer-information--item {
+    margin: 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #bbb;
+}
+
+.customer-information--container .customer-information--item .customer-type {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3C4E5D;
+}
+
+.customer-information--container .customer-information--item .form-information--container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.customer-information--item .form-information--container .customer-call-by {
+    width: 20%;
+}
+
+.customer-information--item .form-information--container .infor-item .infor-title {
+    color: #3C4E5D;
+    margin-bottom: 6px;
+}
+
+.form-information--container .customer-call-by .radio-gender {
+    display: flex;
+}
+
+.form-information--container .customer-call-by .radio-gender label {
+    margin-left: 5px;
+}
+
+.form-information--container .customer-call-by .radio-gender p:last-child {
+    margin-left: 20px;  
+}
+
+.customer-information--item .form-information--container .last-name,
+.customer-information--item .form-information--container .first-name {
+    width: 40%;
+    flex: 1;
+}
+
+.customer-information--item .form-information--container .last-name p,
+.customer-information--item .form-information--container .first-name p {
+    margin-bottom: 6px;
+}
+
+.customer-information--item .form-information--container .infor-item .customer-type--input {
+    width: 50%;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 0.5px solid #3C4E5D;
+}
+
+.customer-information--item .form-information--container .infor-item .last-name--input,
+.customer-information--item .form-information--container .infor-item .first-name--input {
+    width: 90%;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 0.5px solid #3C4E5D;
+}
+
+.customer-information--item .form-information--container .birth-date {
+    width: 50%;
+}
+
+.customer-information--item .form-information--container .birth-date .date-of-birth .react-date-picker__wrapper .react-date-picker__inputGroup input{
+    width: 4rem;
+}
+
+/* More Request */
+
+.input-information--section .more-request--container {
+    margin: 30px 0; 
+    width: 100%;
+}
+
+.input-information--section .more-request--container p {
+    margin-bottom: 5px;
+}
+
+.input-information--section .more-request--container .choice-request--container {
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+}
+
+.choice-request--container .choice-request--item .choice-title {
+    color: #3C4E5D;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Chosen tour section */
+
+.booking-tour--body .choosen-tour--section {
+    width: 30%;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    margin-left: 10px;
+    height: 110vh;
+}
+
+.booking-tour--body .choosen-tour--section .main-title {
+    color: #081B46;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.booking-tour--body .choosen-tour--section .tour-img {
+    background-image: url('../../Assets/About.png');
+    height: 30vh;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.choosen-tour--section .tour-info--container .tour-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tour-info--container .total-price--container,
+.tour-info--container .count-people,
+.tour-info--container .price-type--container .price-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour-info--container .count-people {
+    border-bottom: 0.5px solid #ccc;
+}
+
+.tour-info--container .count-people .total-number{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tour-info--container .total-price--container {
+    margin-top: 20px;
+}
+
+.tour-info--container .total-price--container .total-price {
+    font-weight: bold;
+}
+
+.tour-info--container .total-price--container .total-price--number {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fd5056;
+}
+
+.choosen-tour--section .payment-booking {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #fd5056;
+    color: #fff; 
+    font-weight: bold;
+    font-size: 14px;
+}

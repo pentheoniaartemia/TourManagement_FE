@@ -1,0 +1,292 @@
+
+.main--body {
+    margin-top: 72px;
+}
+/* Introduce customer */
+
+
+.main--body .booking--introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../Assets/TourTitle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+}
+
+.booking--introduction .booking-introduction--container {
+    text-align: center;
+}
+
+.booking--introduction .booking-introduction--container .speech{
+    color: #081B46;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.booking--introduction .booking-introduction--container .word--about-us{
+    color: #DE9E5B;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.booking--introduction .booking-introduction--container button {
+    margin-top: 10px;
+    padding: 10px 28px; 
+    color: #081B46;
+    background-color: transparent;
+    border: #081B46 solid 3px;
+    font-weight: bold;
+}
+
+/* About us */
+
+.main--body .about-us {
+    height: 65vh;
+    padding: 30px 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main--body .about-us .about-us--paragraph {
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+}
+
+.main--body .about-us .island-img {
+    width: 50%;
+    background-image: url(../../Assets/About.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.about-us .about-us--paragraph .question {
+    font-weight: bold;
+    color:#DE9E5B; 
+    margin-bottom: 2px;
+}
+
+.about-us .about-us--paragraph .title {
+    font-weight: bold;
+    color:#081B46;
+    font-size: 34px;
+}
+
+.about-us .about-us--paragraph .paragraph {
+    width: 80%;
+    text-align: justify;
+    color: #B9B4C7;
+    font-weight: 500;
+}
+
+.about-us .about-us--paragraph .more-info {
+    margin-top: 20px;
+    padding: 10px 28px; 
+    color: #081B46;
+    background-color: transparent;
+    border: #081B46 solid 3px;
+    font-weight: bold;
+}
+
+/* Ability */
+
+.main--body .our-ability {
+    height: 90vh;
+    background-image: url(../../Assets/Ability.png);
+    background-size: cover;
+    position: relative;
+}
+
+.main--body .our-ability .our-ability--container {
+    padding-left: 50px;
+    position: absolute;
+    top: 20%;
+}
+
+.our-ability .our-ability--container .ability {
+    font-weight: bold;
+    color:#DE9E5B; 
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.our-ability .our-ability--container .title {
+    color: #fff; 
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.our-ability .our-ability--container .paragraph {
+    color: #fff; 
+    font-weight: bold;
+    width: 90%;
+}
+
+/* Visit place */
+
+.main--body .visit--place {
+    padding: 48px 50px 20px;
+}
+
+.main--body .visit--place .introduce--info {
+    font-weight: bold;
+    color:#DE9E5B; 
+    margin-bottom: 10px;
+}
+
+.main--body .visit--place .visit--place__title {
+    font-weight: bold;
+    color:#081B46; 
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.visit--place .foreign-place .foreign-title,
+.visit--place .domestic-place .domestic-title {
+    font-weight: bold;
+    color:#DE9E5B; 
+    padding: 10px 0;
+}
+
+.visit--place .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.visit--place .card-container .card-item {
+    width: 25%;
+    height: 30vh;
+    position: relative;
+}
+
+.visit--place .card-container .card-item p {
+    position: absolute;
+    color: #fff; 
+    font-weight: bold;
+    font-size: 24px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.visit--place .domestic-place .HCM-city {
+    border-radius: 20px;
+    background-image: url(../../Assets/Tp.HCM.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visit--place .domestic-place .HN-city {
+    border-radius: 20px;
+    background-image: url(../../Assets/HaNoi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visit--place .domestic-place .Hue {
+    border-radius: 20px;
+    background-image: url(../../Assets/Hue.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visit--place .foreign-place .NYC {
+    border-radius: 20px;
+    background-image: url(../../Assets/NewYork.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visit--place .foreign-place .Singapore {
+    border-radius: 20px;
+    background-image: url(../../Assets/Singapore.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visit--place .foreign-place .Malaysia {
+    border-radius: 20px;
+    background-image: url(../../Assets/Malay.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Other information */
+
+.main--body .other--information {
+    padding: 48px 50px 20px;
+}
+
+.main--body .other--information .new {
+    font-weight: bold;
+    color:#DE9E5B; 
+    margin-bottom: 10px;
+}
+
+.main--body .other--information .title {
+    font-weight: bold;
+    color:#081B46; 
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.main--body .other--information .newspaper__card--list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newspaper__card--list .news-item .img-news {
+    width: 70%; 
+    height: 50vh;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.newspaper__card--list .news-item .VN-hotel {
+    background-image: url(../../Assets/HotelVN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.newspaper__card--list .news-item .SGN-spa {
+    background-image: url(../../Assets/SpaSinga.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.newspaper__card--list .news-item .news-title {
+    font-weight: bold;
+    color:#081B46; 
+    font-size: 30px;
+}
+
+.newspaper__card--list .news-item .date {
+    color: #B9B4C7; 
+}
+
+.newspaper__card--list .news-item .news-description {
+    width: 73%;
+    color: #B9B4C7; 
+    font-weight: bold;
+}
+
+.newspaper__card--list .news-item .more-info {
+    margin-top: 20px;
+    padding: 10px 28px; 
+    color: #081B46;
+    background-color: transparent;
+    border: #081B46 solid 3px;
+    font-weight: bold;
+}

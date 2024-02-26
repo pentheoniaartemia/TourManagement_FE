@@ -1,0 +1,124 @@
+.booking-management--body {
+    margin-top: 100px;
+    padding-right: 80px;
+    display: flex;
+    height: 60vh;
+}
+
+.booking-management--body .admin-profile--nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.booking-management--body .admin-profile--nav button {
+    padding: 6px 0;
+    border: none;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.booking-management--body .admin-profile--nav .booking-management {
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+}
+
+.booking-management--body .booking-management--info {
+    width: 80%;
+    margin-left: 50px;
+}
+
+.booking-management--info .list-booking--container .sort-section {
+    margin-bottom: 20px;
+}
+
+.booking-management--info .list-booking--container .sort-section .sort-booking-management-btn{
+    margin-left: 20px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #699bf7;
+    color: #fff;
+}
+
+.booking-management--info .list-booking--container .sort-section input,
+.booking-management--info .list-booking--container .search-section input {
+    padding: 0 5px;
+}
+
+.booking-management--info .list-booking--container .search-section .search-booking-management-btn {
+    margin-left: 20px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #DE9E5B;
+    color: #fff;
+}
+
+.booking-management--info .list-booking--container .create-booking {
+    border: none;
+    padding: 10px 24px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.booking-management--info .list-booking--container .booking-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.booking-management--info .list-booking--container .booking-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.booking-management--info .list-booking--container .booking-item {
+    width: 30%;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    flex-direction: column;
+}
+
+.booking-management--info .list-booking--container .booking-item p {
+    margin-bottom: 0;
+}
+
+.booking-management--info .list-booking--container .booking-item .booking-info .booking-name {
+    font-weight: bold;
+}
+
+.booking-management--info .list-booking--container .booking-item .booking-price .status span,
+.booking-management--info .list-booking--container .booking-item .booking-price .price span {
+    font-size: 18px;
+    color: #F43535;
+}
+
+.booking-management--info .list-booking--container .booking-item .detail-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-management--info .list-booking--container .booking-item .detail-btn .detail {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #08A0F6;
+    color: #08A0F6;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.booking-management--info .list-booking--container .booking-item .detail-btn .delete-booking {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F43535;
+    color: #fff;
+}

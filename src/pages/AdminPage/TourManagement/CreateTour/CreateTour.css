@@ -1,0 +1,42 @@
+.create-tour--body {
+    margin-top: 80px;
+    padding: 0 50px;
+}
+
+.create-tour--body .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.create-tour--body .create-tour-info--container {
+    width: 50%;
+}
+
+.create-tour--body .create-tour-info--container .create-tour--item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.create-tour--body .create-tour-info--container .create-tour--item p {
+    margin-bottom: 0;
+}
+
+.create-tour--body .create-tour-info--container .create-tour--item input {
+    width: 60%;
+    margin-left: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.create-tour--body .create-tour--btn {
+    border: none;
+    padding: 10px 20px; 
+    margin-bottom: 50px;
+    background-color: #DE9E5B;
+    color: #fff;
+    border-radius: 5px;
+}

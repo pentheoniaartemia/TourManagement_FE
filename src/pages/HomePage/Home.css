@@ -1,0 +1,555 @@
+
+.home--body {
+  margin-top: 72px;
+}
+
+.home--body .favorite-places .title,
+.home--body .special-offers .title,
+.home--body .offer--last-time .title,
+.home--body .offers-slider .title,
+.home--body .discover .title {
+  color:#081B46;
+  padding: 20px 0 30px 40px; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Main Slideshow */
+
+.home--body .slideshow-container {
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+  height: 50vh;
+  transition: ease 1000ms;
+}
+
+.home--body .slideshow-container .main-slide {
+  width: 100%;
+  display: inline-block;
+}
+
+.slideshow-container .main-slide .carousel {
+  background-image: url(../../Assets/Carousel.png);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .main-slide .carousel1 {
+  background-image: url(../../Assets/Carousel1.png);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .main-slide .carousel2 {
+  background-image: url(../../Assets/Carousel2.png);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+}
+
+.home--body .slideshow-container .dots-container {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+  display: none;
+}
+
+.slideshow-container .dots-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: #bbb 0.6s ease;
+}
+
+.slideshow-container .dots-container .dot:hover {
+  background-color: #717171;
+}
+
+/* Search section */
+
+.home--body .search-section {
+  width: 100%;
+  background-color: #08A0F6;
+  /* opacity: 26%; */
+}
+
+.home--body .search-section .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0 10px; 
+}
+
+.search-container .search-item {
+  flex: 1;
+  text-align: center;
+}
+
+.search-container .search-item .search-icon {
+  width: 30px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.search-container .search-item .search-icon__double {
+  width: 80px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.search-container .search-item .search-description {
+  color: #000;  
+}
+
+.search-container .search-item .car-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Car.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-container .search-item .hotel-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Hotel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-container .search-item .plane-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Plane.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-container .search-item .plane_hotel-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Plane&Hotel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-container .search-item .car_hotel-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Car&Hotel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-container .search-item .searching-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../Assets/Search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Offer slider */
+
+/* Discover */
+
+.home--body .discover .explore-container{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.explore-container .explore-item {
+  width: 25%;
+  height: 45vh; 
+  position: relative;
+}
+
+.explore-container .explore-item .description {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 70%;
+  left: 15%;
+  text-align: center;
+}
+
+.explore-container .explore-item .boat-img {
+  width: 70%;
+  height: inherit;
+  background-image: url(../../Assets/Explore.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.explore-container .explore-item .japan-img {
+  width: 70%;
+  height: inherit;
+  background-image: url(../../Assets/Explore1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.explore-container .explore-item .paris-img {
+  width: 70%;
+  height: inherit;
+  background-image: url(../../Assets/Explore2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.explore-container .explore-item .NYC-img {
+  width: 70%;
+  height: inherit;
+  background-image: url(../../Assets/Explore3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+/* Offer tour last time */
+
+.home--body .offer--last-time .tour__last-container {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 30px;
+}
+
+.offer--last-time .tour__last-container .tour__last-item {
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid #081B46;
+  /* box-shadow: 2px 4px 2px #888; */
+}
+
+.tour__last-item .place-img {
+  width: 100%;
+  height: 30vh;
+  background-image: url(../../Assets/Discount.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tour__last-item .place-img .tour-type--container {
+  padding: 6px;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.place-img .tour-type--container .clock-icon {
+  background-image: url(../../Assets/Clock.svg);
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.place-img .tour-type--container .tour-type--name p {
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.tour__last-item .place-img .rating-numb--container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #DE9E5B;
+  margin: 10px 10px 0 0;
+  border-radius: 5px;
+}
+
+.place-img .rating-numb--container .rating-numb {
+  margin-bottom: 0;
+  padding: 4px 8px; 
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tour__last-item .place-content {
+  padding: 15px 15px 20px 15px;
+  box-shadow: 2px 4px 2px #888;
+}
+
+.tour__last-item .place-content .depart-date {
+  color: #081B46; 
+  font-size: 14px;
+}
+
+.tour__last-item .place-content .name-tour {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.place-content .price--sale-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.place-content .price--sale-container .price-container .price--pre-sale {
+  text-decoration: line-through;
+  margin-bottom: 3px;
+}
+
+.place-content .price--sale-container .price-container .price--after-sale {
+  color: #F43535; 
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.place-content .price--sale-container .sale-percent {
+  background-color: #F43535;
+  border-radius: 10px;
+}
+
+.place-content .price--sale-container .sale-percent .sale-percent--numb {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.tour__last-item .place-content .regsiter-tour--button {
+  width: 100%;
+  text-align: center;
+}
+
+.tour__last-item .place-content .count-instock {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 3px solid #081B46;
+  font-weight: bold;
+  color: #081B46;
+  background-color: transparent;
+}
+
+/* Special tour */
+
+.home--body .special-offers .special-tour-container {
+  padding: 0 40px;
+}
+
+.special-tour-container .special-tour--item {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 2px 4px 2px #888;
+  border-radius: 20px 0 0 20px;
+}
+
+.special-tour-container .special-tour--item .special-tour--img {
+  flex: 1;
+  background-image: url(../../Assets/Special.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: inherit;
+  border-radius: 20px 0 0 20px;
+}
+
+.special-tour-container .special-tour--item .special-tour--content {
+  flex: 2;
+  padding: 20px 0 20px 10px;
+  border-right: 1px solid #000;
+}
+
+.special-tour--item .special-tour--content .tour-service {
+  background-color: #081B46;
+  color: #fff;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.special-tour--item .special-tour--content .name-tour {
+  width: 90%;
+  font-weight: bold;
+  color:#081B46; 
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.special-tour--item .special-tour--content .service-detail {
+  color: #B9B4C7;
+}
+
+.special-tour--item .special-tour--content .rating--comment {
+  display: flex;
+  align-items: center;
+}
+
+.special-tour--content .rating--comment .rating {
+  background-color: #DE9E5B;
+  color: #fff; 
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+.special-tour--content .rating--comment .comment {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.special-tour--item .special-tour--content .gathering-place {
+  display: flex;
+  align-items: center;
+}
+
+.special-tour--content .gathering-place .pin-point {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../Assets/PinPoint.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.special-tour--content .gathering-place .address {
+  color: #699BF7; 
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.special-tour--content .gathering-place .address p {
+  margin-bottom: 0;
+}
+
+.special-tour-container .special-tour--item .special-tour--price {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 10px;
+}
+
+.special-tour--item .special-tour--price .text {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.special-tour--item .special-tour--price .price {
+  margin-bottom: 5px;
+}
+
+.special-tour--item .special-tour--price .price span {
+  color: #F43535;
+  font-weight: bold;
+}
+
+.special-tour--item .special-tour--price .depart-date {
+  font-size: 14px;
+}
+
+.special-tour--item .special-tour--price .booking-btn {
+  padding: 6px 10px; 
+  background-color: #F43535;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.special-tour--item .special-tour--price .side-info {
+  color:#08A0F6; 
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Favorite place */
+
+.home--body .favorite-places--container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.home--body .favorite-places--container .favorite-places--item {
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.favorite-places--item .favorite-place--img {
+  width: 60%; 
+  height: 30vh;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.favorite-places--item .halong {
+  background-image: url(../../Assets/Favorite.png);
+}
+
+.favorite-places--item .danang {
+  background-image: url(../../Assets/Favorite1.png);
+}
+
+.favorite-places--item .dalat {
+  background-image: url(../../Assets/Favorite2.png);
+}
+
+.favorite-places--item .japan {
+  background-image: url(../../Assets/Favorite3.png);
+}
+
+.favorite-places--item .france {
+  background-image: url(../../Assets/Favorite4.png);
+}
+
+.favorite-places--item .australia {
+  background-image: url(../../Assets/Favorite5.png);
+}
+
+.favorite-places--item .favorite-place--name .name {
+  color: #081B46;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.favorite-places--item .favorite-place--name .favorite-likes {
+  color: #081B46;
+  font-size: 14px;
+}

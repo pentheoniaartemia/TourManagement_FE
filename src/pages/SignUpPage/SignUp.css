@@ -1,0 +1,38 @@
+/* Body */
+.register-body {
+    margin-top: 77px;
+    width: 100%;
+}
+.register-body-img {
+    background-image: url("../../Assets/backgroud.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-body .register-body-img .title {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.register--form .sign-up--button {
+    background-color: #DE9E5B;
+    color: #fff; 
+    text-transform: uppercase;
+}
+
+.register--form .login--button {
+    margin-bottom: 0 !important;
+    color: #B9B4C7 !important;
+    font-weight: bold;
+}
+
+.register--form .login--button a {
+    color: #DE9E5B;
+}

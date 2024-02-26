@@ -1,0 +1,108 @@
+.payment--body {
+    margin-top: 72px;
+    padding: 40px 80px;
+    display: flex;
+}
+
+
+/* Payment method select */
+.payment--body .choose-payment-method--section {
+    width: 70%;
+}
+
+.payment--body .choose-payment-method--section .title {
+    color: #081B46;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.payment--body .payment-list--container .payment-item {
+    margin-bottom: 40px;
+}
+
+.payment--body .payment-list--container .payment-item label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.payment--body .payment-list--container .payment-item input[type="radio"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #999;
+}
+
+/* Order information */
+
+.payment--body .detail-order--section {
+    width: 30%;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    margin-left: 10px;
+    height: 110vh;
+}
+
+.payment--body .detail-order--section .main-title {
+    color: #081B46;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.payment--body .detail-order--section .tour-img {
+    background-image: url('../../Assets/About.png');
+    height: 30vh;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-order--section .tour-info--container .tour-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tour-info--container .total-price--container,
+.tour-info--container .count-people,
+.tour-info--container .price-type--container .price-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour-info--container .count-people {
+    border-bottom: 0.5px solid #ccc;
+}
+
+.tour-info--container .count-people .total-number{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tour-info--container .total-price--container {
+    margin-top: 20px;
+}
+
+.tour-info--container .total-price--container .total-price {
+    font-weight: bold;
+}
+
+.tour-info--container .total-price--container .total-price--number {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fd5056;
+}
+
+.detail-order--section .payment-booking {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #fd5056;
+    color: #fff; 
+    font-weight: bold;
+    font-size: 14px;
+}

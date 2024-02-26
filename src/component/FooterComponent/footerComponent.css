@@ -1,0 +1,55 @@
+.login-footer {
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.5px solid #ccc;
+    padding-top: 30px;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.login-footer .title {
+    font-weight: bold;
+    color: #000;
+}
+
+.login-footer p {
+    color: #3C4E5D;
+}
+
+
+.login-footer-title {
+    font-size: 18px;
+    font-style: bold;
+    text-align: center;
+}
+
+.login-footer-title p:first-child {
+    color: #081B46;
+    font-weight: bold;
+}
+
+.login-footer-title p:last-child {
+    color: #DE9E5B;
+    font-weight: bold;
+}
+
+.login-footer-input {
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+.login-footer-input input {
+    padding: 6px 18px;
+    width: 360px;
+    font-size: 16px;
+}
+
+.login-footer-input button {
+    background-color: #081B46;
+    padding: 6px 24px;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}

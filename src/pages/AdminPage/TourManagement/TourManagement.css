@@ -1,0 +1,107 @@
+.tour-management--body {
+    margin-top: 100px;
+    padding-right: 80px;
+    display: flex;
+    height: 60vh;
+}
+
+.tour-management--body .admin-profile--nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.tour-management--body .admin-profile--nav button {
+    padding: 6px 0;
+    border: none;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.tour-management--body .admin-profile--nav .tour-management {
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+}
+
+.tour-management--body .tour-management--info {
+    width: 80%;
+    margin-left: 50px;
+    height: fit-content;
+}
+
+.tour-management--info .list-tour--container {
+    margin-bottom: 30px;
+}
+
+.tour-management--info .list-tour--container .create-tour {
+    border: none;
+    padding: 10px 24px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.tour-management--info .list-tour--container .tour-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tour-management--info .list-tour--container .tour-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.tour-management--info .list-tour--container .tour-item p {
+    margin-bottom: 0;
+}
+
+.tour-management--info .list-tour--container .tour-item .tour-info {
+    flex: 2;
+}
+
+.tour-management--info .list-tour--container .tour-item .tour-info .tour-name {
+    font-weight: bold;
+}
+
+.tour-management--info .list-tour--container .tour-item .tour-price {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.tour-management--info .list-tour--container .tour-item .tour-price .price {
+    color: #F43535;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.tour-management--info .list-tour--container .tour-item .detail-btn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tour-management--info .list-tour--container .tour-item .detail-btn .detail {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #08A0F6;
+    color: #08A0F6;
+    margin-bottom: 10px;
+}
+
+.tour-management--info .list-tour--container .tour-item .detail-btn .delete-tour {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F43535;
+    color: #fff;
+}

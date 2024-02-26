@@ -1,0 +1,94 @@
+.user-booked--body {
+    margin-top: 100px;
+    padding-right: 80px;
+    display: flex;
+    height: 60vh;
+}
+
+.user-booked--body .user-booked--nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.user-booked--body .user-booked--nav button {
+    padding: 6px 0;
+    border: none;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.user-booked--body .user-booked--nav .user-info {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.user-booked--body .user-booked--info {
+    width: 80%;
+    margin-left: 50px;
+}
+
+.user-booked--body .user-booked--info .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #081B46;
+    margin-bottom: 5px;
+}
+
+.user-booked--body .user-booked--info .booked-tour--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-booked--info .booked-tour--container .booking-item {
+    width: 30%;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    flex-direction: column;
+}
+
+.user-booked--info .booked-tour--container .booking-item p {
+    margin-bottom: 0;
+}
+
+.user-booked--info .booked-tour--container .booking-item .booking-info .booking-name {
+    font-weight: bold;
+}
+
+.user-booked--info .booked-tour--container .booking-item .booking-price .status span,
+.user-booked--info .booked-tour--container .booking-item .booking-price .price span {
+    font-size: 18px;
+    color: #F43535;
+}
+
+.user-booked--info .booked-tour--container .booking-item .detail-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-booked--info .booked-tour--container .booking-item .detail-btn .detail {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #08A0F6;
+    color: #08A0F6;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.user-booked--info .booked-tour--container .booking-item .detail-btn .delete-booking {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F43535;
+    color: #fff;
+}
+
+
+
