@@ -14,9 +14,9 @@ const PaymentPage = () => {
     const [tour, setTour] = useState([]);
 
     const { id } = useParams();
-
     const [detailBookingLoaded, setDetailBookingLoaded] = useState(false);
 
+    // Nhận data chi tiết của booking
     const getDetailBooking = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/booking/get/${id}`);
         setBook(data?.book);
@@ -27,23 +27,17 @@ const PaymentPage = () => {
         getDetailBooking()
     },[])
     
+    // Nhận data chi tiết của tour
     const getDetailTour = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/tour/detail-tour?id=${book.TourR}`);
         setTour(data?.tour);
     }
 
     useEffect(() => {
-        if (book.TourR) {
+        if (detailBookingLoaded && book && book.TourR) {
           getDetailTour();
         }
-      }, [book]);
-
-      useEffect(() => {
-        // Chỉ gọi `getDetailTour` khi `detailBookingLoaded` đã được thiết lập và `book` có giá trị
-        if (detailBookingLoaded && book) {
-          getDetailTour();
-        }
-      }, [detailBookingLoaded, book]);
+    }, [detailBookingLoaded, book]);
 
     // Chuyển imageTour từ object thành array
     const imgTour = tour.imageTour;
@@ -59,6 +53,7 @@ const PaymentPage = () => {
         
     const imgTour1 = imgTourArray[0];
 
+    // Nhận data input
     const [paymentMethod, setPaymentMethod] = useState('');
 
     const handlePaymentChange = (event) => {
@@ -68,6 +63,7 @@ const PaymentPage = () => {
       console.log(selectedPaymentMethod)
     };
 
+    // Truyền data mới (payment method) qua API 
     const mutation = useMutationHooks(
         data => BookingService.updateBooking(id, data)
     );
@@ -78,6 +74,7 @@ const PaymentPage = () => {
         })
     }
 
+     // Xử lí sau khi đã xác nhận data truyền vào
     const { isSuccess, isError } = mutation;
 
     useEffect(() => {

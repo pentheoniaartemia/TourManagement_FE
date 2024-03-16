@@ -80,7 +80,6 @@ const OrderDetailPage = () => {
     const handlePaidChange = (event) => {
         const selectedPaymentMethod = event.target.value;
         setStatus(selectedPaymentMethod);
-  
         console.log(selectedPaymentMethod)
       };
 

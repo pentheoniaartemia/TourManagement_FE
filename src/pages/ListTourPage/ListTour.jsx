@@ -12,7 +12,7 @@ const ListTourPage = () => {
     const [tours, setTour] = useState([]);
     const navigate = useNavigate();
 
-    //get products
+    // Nhận data từ API 
     const getAllProduct = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/tour/list-tour`);
         setTour(data?.allTour);

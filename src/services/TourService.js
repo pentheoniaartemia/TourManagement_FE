@@ -12,5 +12,5 @@ export const createTour = async (data) => {
 
 export const updateTour = async(id, data) => {
     const res = await axios.put(`${process.env.REACT_APP_API_KEY}/tour/update-tour/${id}`, data);
-    return res.data;
+    return res.data;    
 }

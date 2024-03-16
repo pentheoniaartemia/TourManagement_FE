@@ -9,37 +9,36 @@ import { useMutationHooks } from '../../hooks/useMutationHook';
 
 const BookingPage = () => {
 
-    // Thông tin tour
     const { id } = useParams(); 
     const [tourInfo, setTourInfo] = useState([]);
 
     const navigate = useNavigate();
 
+    // Nhận thông tin tour từ API
     const getDetailTour = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/tour/detail-tour/${id}`);
         setTourInfo(data?.tour);
     }
 
-        // Chuyển imageTour từ object thành array
-        const imgTour = tourInfo.imageTour;
+    // Chuyển imageTour từ object thành array
+    const imgTour = tourInfo.imageTour;
 
-        const imgTourArray = [];
-    
-        for (let key in imgTour) {
-            if (imgTour.hasOwnProperty(key)) {
+    const imgTourArray = [];
+    for (let key in imgTour) {
+        if (imgTour.hasOwnProperty(key)) {
               
-              imgTourArray.push(imgTour[key]);
-            }
+            imgTourArray.push(imgTour[key]);
         }
+    }
     
-        const imgTour1 = imgTourArray[0];
+    const imgTour1 = imgTourArray[0];
 
     useEffect(() => {
         if (id) 
             getDetailTour();
     }, [id]);
 
-    // Tương tác số lượng khách
+    // Tùy chỉnh số lượng khách
     let [adult, setAdult] = useState(1); 
     let [teen, setTeen] = useState(0); 
     let [children, setChildren] = useState(0); 
@@ -59,9 +58,7 @@ const BookingPage = () => {
     const [customerName, setCustomerName] = useState([]); 
     const [customerPassport, setCustomerPassport] = useState([]);
     const [customerType, setCustomerType] = useState([]);
-
-    
-    // Số lượng khách   
+       
     const handleCustomer = () => {
         let newArray = Array(totalPeople).fill(null);
         setCustomers(newArray);
@@ -70,7 +67,7 @@ const BookingPage = () => {
         setCustomerType(newArray)
     }
 
-    // Adult interaction
+    // Chỉnh số lượng adult
     const handleAdultPlus = () => {
         setAdult(adult++);
         setIsAdult(true);
@@ -87,7 +84,7 @@ const BookingPage = () => {
         }
     }
 
-    // Teen interaction
+    // Chỉnh số lượng teen
     const handleTeenPlus = () => {
         setTeen(teen++);
         setIsAdult(false);
@@ -104,7 +101,7 @@ const BookingPage = () => {
         }
     }
 
-    // Children interaction
+    // Chỉnh số lượng children
     const handleChildrenPlus = () => {
         setChildren(children++);
         setIsAdult(false);
@@ -121,7 +118,7 @@ const BookingPage = () => {
         }
     }
 
-    // Infant interaction
+    // Chỉnh số lượng infant
     const handleInfantPlus = () => {
         setInfant(infant++);
         setIsAdult(false);
@@ -139,7 +136,7 @@ const BookingPage = () => {
     }
 
 
-   // Đưa giá trị nhập vào input vào const
+   // Nhập vào form mới sau khi thay đổi số lượng khách
     const handleOnChangeName = (e, index) => {
         setCustomerName((prevCustomerName) => {
             const newCustomerName = [...prevCustomerName];
@@ -173,6 +170,7 @@ const BookingPage = () => {
         });
     }
 
+    // Khai báo và nhận giá trị input
     const [registerName, setRegisterName] = useState(''); 
     const [registerEmail, setRegisterEmail] = useState(''); 
     const [registerPhone, setRegisterPhone] = useState(''); 
@@ -216,8 +214,7 @@ const BookingPage = () => {
         setPayPrice(totalPrice)
     },[totalPrice])
 
-    // Gửi dữ liệu qua API
-
+    // Truyền data qua API
     const mutation = useMutationHooks (
         data => createBooking(data)
     )
@@ -258,16 +255,17 @@ const BookingPage = () => {
         numberOfInfant
     };
 
+    // Tạo booking mới và chuyển sang trang Payment
     const createBooking = async () => {
         const { data } = await axios.post(`${process.env.REACT_APP_API_KEY}/booking/create/${tourInfo._id}`, dataContainer);
         navigate(`/payment/${data?.newBooking?._id}`)
     }
 
+    // Xử lí sau khi đã xác nhận data truyền vào
     const {isSuccess} = mutation;
 
     useEffect(() => {
         if(isSuccess) {
-            // navigate('/home')
             alert("Đặt tour thành công")
         }
     },[isSuccess])

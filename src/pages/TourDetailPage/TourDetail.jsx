@@ -10,36 +10,14 @@ const TourDetailPage = () => {
     const [tour, setTour] = useState([]);
     const { id } = useParams();
 
-    // const imgTour1 = 0;
-    // const imgTour2 = 0;
-    // const imgTour3 = 0;
-    // const imgTour4 = 0;
-    // const imgTour5 = 0;
-
-    // const imgTour1 = tour.imageTour[0];
-    // const imgTour2 = tour.imageTour[1];
-    // const imgTour3 = tour.imageTour[2];
-    // const imgTour4 = tour.imageTour[3];
-    // const imgTour5 = tour.imageTour[4];
-
-    // if(imgTour2 == null) {
-    //     imgTour2 = tour.imageTour[0];
-    // } else if(imgTour3 == null) {
-    //     imgTour3 = tour.imageTour[0];
-    // } else if(imgTour4 == null) {
-    //     imgTour4 = tour.imageTour[0];
-    // } else if(imgTour5 == null) {
-    //     imgTour5 = tour.imageTour[0];
-    // }
-
+    // Call API để nhận data    
     const getDetailTour = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/tour/detail-tour/${id}`);
         setTour(data?.tour);
     }
 
-    // Chuyển imageTour từ object thành array
+    // Chuyển imageTour từ object thành array để hiển thị hình ảnh
     const imgTour = tour.imageTour;
-
     const imgTourArray = [];
 
     for (let key in imgTour) {

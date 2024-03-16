@@ -14,11 +14,10 @@ const UserProfilePage = () => {
 
     const navigate = useNavigate(); 
 
+    // Nhận data của user từ sessionStorage và đưa vào form thông tin của user
     const getDetailUser = () => {
         const userData = sessionStorage.getItem('UserInfo'); 
-
         const userInfo = JSON.parse(userData);
-        // console.log(userInfo.data);
 
         setUsername(userInfo.data.name);
         setEmail(userInfo.data.email);
@@ -29,6 +28,7 @@ const UserProfilePage = () => {
         getDetailUser()
     },[])
 
+    // Nhận giá trị input
     const handleOnChangeName = (e) => {
         setUsername(e.target.value);
     }
@@ -41,6 +41,8 @@ const UserProfilePage = () => {
         setPhone(e.target.value);
     }
 
+
+    // Chuyển hướng trang
     const handleLogOut = () => {
         sessionStorage.removeItem('UserInfo');
         navigate('/home');
@@ -51,6 +53,7 @@ const UserProfilePage = () => {
     }
 
 
+    // Cập nhật data mới từ user
     const userData2 = sessionStorage.getItem('UserInfo'); 
     const userInfo2 = JSON.parse(userData2);
 
@@ -69,7 +72,8 @@ const UserProfilePage = () => {
         console.log(username, email, phone);
     }
 
-    const {data, isLoading, isSuccess, isError} = mutation;
+     // Xử lí sau khi đã xác nhận data mới
+    const {isSuccess, isError} = mutation;
 
     useEffect(() => {
         if(isSuccess) {

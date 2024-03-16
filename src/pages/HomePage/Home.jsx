@@ -11,7 +11,7 @@ const carasoulContainer = [carousel, carousel1, carousel2];
 
 const Home = () => {
 
-    // Custom slideshow
+    // Image Slideshow
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -25,10 +25,6 @@ const Home = () => {
       
           return () => {};
     }, [index])
-
-    //functionality
-
-
 
     return (
         <>

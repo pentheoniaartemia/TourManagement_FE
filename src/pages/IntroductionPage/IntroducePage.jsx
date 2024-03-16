@@ -8,8 +8,6 @@ const IntroducePage = () => {
             <HeaderComponent></HeaderComponent>
 
             <div className="main--body">
-
-                {/* Introduce customer */}
                 <div className="booking--introduction">
                     <div className="booking-introduction--container">
                         <p className="speech">Hãy yên tâm trải nghiệm du lịch vòng quanh thế giới cùng chúng tôi nhé</p>
@@ -18,7 +16,7 @@ const IntroducePage = () => {
                     </div>
                 </div>
 
-                {/* About us */}
+
                 <div className="about-us">
                     <div className="about-us--paragraph">
                         <p className="question">Tại sao SeaWonder?</p>
@@ -29,7 +27,7 @@ const IntroducePage = () => {
                     <div className="island-img"></div>
                 </div>
 
-                {/* Ability */}
+
                 <div className="our-ability">
                     <div className="our-ability--container">
                         <p className="ability">TÍNH NĂNG CỦA CHÚNG TÔI</p>
@@ -38,7 +36,7 @@ const IntroducePage = () => {
                     </div>
                 </div>
 
-                {/* Place to visit in and out */}
+ 
                 <div className="visit--place">
                     <p className="introduce--info">CHÚNG TÔI HƯỚNG ĐẾN HƠN 68 QUỐC GIA TRÊN THẾ GIỚI</p>
                     <p className="visit--place__title">Điểm Đến Phổ Biến</p>
@@ -79,7 +77,7 @@ const IntroducePage = () => {
                     </div>
                 </div>
 
-                {/* Hotel or newspaper */}
+               
                 <div className="other--information">
                     <p className="new">MỚI</p>
                     <p className="title">Kênh</p>

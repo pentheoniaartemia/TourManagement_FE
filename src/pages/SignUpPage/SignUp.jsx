@@ -39,21 +39,11 @@ const SignUpPage = () => {
         navigate('/sign-in');
     }
 
-    // Tạo biến truyền data nhập từ input qua class khác
+
+    // Tạo biến truyền data nhập từ input qua class chứa API
     const mutation = useMutationHooks(
         data => UserService.createUser(data)
     );
-
-    const {data, isLoading, isSuccess, isError} = mutation;
-
-    useEffect(() => {
-        if(isSuccess) {
-            handleNavigateSignIn();
-            alert("Đăng ký thành công")
-        } else if(isError) {
-            alert("Hiện tại đang xảy ra trục trặc! Xin quý khách hàng thông cảm.")
-        }
-    }, [isSuccess, isError])
 
     const handleSignUp = () => {
         mutation.mutate({
@@ -64,6 +54,18 @@ const SignUpPage = () => {
         })
         console.log(name, email, password);
     }
+
+    // Xử lí sau khi đã xác nhận data truyền vào
+    const {isSuccess, isError} = mutation;
+
+    useEffect(() => {
+        if(isSuccess) {
+            handleNavigateSignIn();
+            alert("Đăng ký thành công")
+        } else if(isError) {
+            alert("Hiện tại đang xảy ra trục trặc! Xin quý khách hàng thông cảm.")
+        }
+    }, [isSuccess, isError])
     
 
     return (

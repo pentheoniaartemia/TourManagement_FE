@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import LogoImg from "../../Assets/Logo.png"
 import './headerComponent.css'
 import '../../css/bootstrap.min.css'
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../pattern/context";
 
 const HeaderComponent = () => {
 
@@ -16,11 +17,13 @@ const HeaderComponent = () => {
         navigate('/home');
     }
 
+    const { user } = useContext(AuthContext);
+
     const handleUserProfile = () => {
         
         const userInfostring = sessionStorage.getItem('UserInfo')
 
-        var userInfo = JSON.parse(userInfostring);
+        var userInfo = JSON.parse(user);
 
         if (userInfo) {
             if(!userInfo.data.isAdmin) {

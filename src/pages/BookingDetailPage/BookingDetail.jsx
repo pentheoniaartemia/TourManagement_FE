@@ -10,12 +10,20 @@ const BookingDetailPage = () => {
 
     const [book, setBook] = useState([]);
     const { id } = useParams();
+    const price = book?.payPrice?.toLocaleString();
 
+    // Nhận data chi tiết của booking
     const getDetailBooking = async () => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/booking/get/${id}`);
         setBook(data?.book);
     }
 
+    
+    useEffect(() => {
+        getDetailBooking()
+    },[])
+
+    // Lấy số lượng trong booking
     let [customers, setCustomers] = useState([]);
 
     const handleCustomer = () => {
@@ -25,16 +33,10 @@ const BookingDetailPage = () => {
     }
 
     useEffect(() => {
-        getDetailBooking()
-    },[])
-
-    useEffect(() => {
         if(book?.TourR) {
             handleCustomer()
         }
     },[book])
-
-    const price = book?.payPrice?.toLocaleString();
 
     // Chuyển customerName từ object thành array
     const name = book.customerName;
@@ -47,8 +49,6 @@ const BookingDetailPage = () => {
           nameArray.push(name[key]);
         }
     }
-
-    
 
     // Chuyển customerPassport từ object thành array
     const passport = book.customerPassport;
@@ -74,6 +74,7 @@ const BookingDetailPage = () => {
         }
     }
 
+    // Khai báo và xử lí danh sách thông tin (tên, passport) của khách hàng
     const [customerName, setCustomerName] = useState(nameArray)
     const [customerPassport, setCustomerPassport] = useState(passportArray)
 
@@ -94,7 +95,8 @@ const BookingDetailPage = () => {
           return newArray;
         });
       };
-
+    
+    // Truyền data mới qua API   
     const mutation = useMutationHooks(
         data => BookingService.updateBooking(id, data)
     );

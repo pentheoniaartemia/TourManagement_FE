@@ -9,6 +9,7 @@ const MyTourPage = () => {
     const navigate = useNavigate(); 
     const [bookedTours, setBookedTour] = useState([]);
 
+    // Nhận data từ email truyền vào
     const getBookedTour = async (email) => {
         const { data } = await axios.get(`${process.env.REACT_APP_API_KEY}/booking/my-tour?email=${email}`);
         setBookedTour(data?.checkEmail)
@@ -21,6 +22,7 @@ const MyTourPage = () => {
         getBookedTour(userInfo.data.email)
     },[])
 
+    // Chuyển hướng trang
     const handleLogOut = () => {
         sessionStorage.removeItem('UserInfo');
         navigate('/home');
