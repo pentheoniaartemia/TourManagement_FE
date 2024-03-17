@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import HeaderComponent from '../../component/HeaderComponent/HeaderComponent';
 import '../BookingPage/Booking.css'
@@ -5,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { createBooking } from '../../services/BookingService';
 import { useMutationHooks } from '../../hooks/useMutationHook';
+import CustomerQuantity from '../../pattern/constructor';
 
 
 const BookingPage = () => {
@@ -67,73 +69,73 @@ const BookingPage = () => {
         setCustomerType(newArray)
     }
 
-    // Chỉnh số lượng adult
-    const handleAdultPlus = () => {
-        setAdult(adult++);
-        setIsAdult(true);
-        setIsChildren(false);
-        setIsTeen(false);
-        setIsInfant(false);
-    }
+    // // Chỉnh số lượng adult
+    // const handleAdultPlus = () => {
+    //     setAdult(adult++);
+    //     setIsAdult(true);
+    //     setIsChildren(false);
+    //     setIsTeen(false);
+    //     setIsInfant(false);
+    // }
 
-    const handleAdultMinor = () => {
-        if(adult < 1) {
-            alert('Không thể bé hơn 1'); 
-        } else {
-            setAdult(adult--);
-        }
-    }
+    // const handleAdultMinor = () => {
+    //     if(adult < 1) {
+    //         alert('Không thể bé hơn 1'); 
+    //     } else {
+    //         setAdult(adult--);
+    //     }
+    // }
 
-    // Chỉnh số lượng teen
-    const handleTeenPlus = () => {
-        setTeen(teen++);
-        setIsAdult(false);
-        setIsChildren(false);
-        setIsTeen(true);
-        setIsInfant(false);
-    }
+    // // Chỉnh số lượng teen
+    // const handleTeenPlus = () => {
+    //     setTeen(teen++);
+    //     setIsAdult(false);
+    //     setIsChildren(false);
+    //     setIsTeen(true);
+    //     setIsInfant(false);
+    // }
 
-    const handleTeenMinor = () => {
-        if(teen < 0) {
-            alert('Không thể bé hơn 0'); 
-        } else {
-            setTeen(teen--);
-        }
-    }
+    // const handleTeenMinor = () => {
+    //     if(teen < 0) {
+    //         alert('Không thể bé hơn 0'); 
+    //     } else {
+    //         setTeen(teen--);
+    //     }
+    // }
 
-    // Chỉnh số lượng children
-    const handleChildrenPlus = () => {
-        setChildren(children++);
-        setIsAdult(false);
-        setIsChildren(true);
-        setIsTeen(false);
-        setIsInfant(false);
-    }
+    // // Chỉnh số lượng children
+    // const handleChildrenPlus = () => {
+    //     setChildren(children++);
+    //     setIsAdult(false);
+    //     setIsChildren(true);
+    //     setIsTeen(false);
+    //     setIsInfant(false);
+    // }
 
-    const handleChildrenMinor = () => {
-        if(children < 0) {
-            alert('Không thể bé hơn 0'); 
-        } else {
-            setChildren(children--);
-        }
-    }
+    // const handleChildrenMinor = () => {
+    //     if(children < 0) {
+    //         alert('Không thể bé hơn 0'); 
+    //     } else {
+    //         setChildren(children--);
+    //     }
+    // }
 
-    // Chỉnh số lượng infant
-    const handleInfantPlus = () => {
-        setInfant(infant++);
-        setIsAdult(false);
-        setIsChildren(false);
-        setIsTeen(false);
-        setIsInfant(true);
-    }
+    // // Chỉnh số lượng infant
+    // const handleInfantPlus = () => {
+    //     setInfant(infant++);
+    //     setIsAdult(false);
+    //     setIsChildren(false);
+    //     setIsTeen(false);
+    //     setIsInfant(true);
+    // }
 
-    const handleInfantMinor = () => {
-        if(infant < 0) {
-            alert('Không thể bé hơn 0'); 
-        } else {
-            setInfant(infant--);
-        }
-    }
+    // const handleInfantMinor = () => {
+    //     if(infant < 0) {
+    //         alert('Không thể bé hơn 0'); 
+    //     } else {
+    //         setInfant(infant--);
+    //     }
+    // }
 
 
    // Nhập vào form mới sau khi thay đổi số lượng khách
@@ -143,7 +145,6 @@ const BookingPage = () => {
             newCustomerName[index] = e.target.value;
             return newCustomerName;
         });
-        console.log(customerName);
     }
 
     const handleOnChangePassport = (e, index) => {
@@ -303,56 +304,22 @@ const BookingPage = () => {
                         </div>
                     </div>
 
+                    {/* Tùy chỉnh số lượng hành khách */}
                     <div className="customer-count--container">
                         <p className="title">Hành khách</p>
                         <div className="customer-quantity--container">
-                            <div className="customer-type-quantity--item">
-                                <div className="customer-type">
-                                    <p className="customer-type-name">Người lớn</p>
-                                    <p className="age">Trên 12 tuổi</p>
-                                </div>
-                                <div className="quantity-customer">
-                                    <p className="minor" onClick={handleAdultMinor}>-</p>
-                                    <p className="count">{adult}</p>
-                                    <p className="plus" onClick={handleAdultPlus}>+</p>
-                                </div>
-                            </div>
+                            
 
-                            <div className="customer-type-quantity--item">
-                                <div className="customer-type">
-                                    <p className="customer-type-name">Trẻ em</p>
-                                    <p className="age">Từ 5 - 11 tuổi</p>
-                                </div>
-                                <div className="quantity-customer">
-                                    <p className="minor" onClick={handleTeenMinor}>-</p>
-                                    <p className="count">{teen}</p>
-                                    <p className="plus" onClick={handleTeenPlus}>+</p>
-                                </div>
-                            </div>
-
-                            <div className="customer-type-quantity--item">
-                                <div className="customer-type">
-                                    <p className="customer-type-name">Trẻ nhỏ</p>
-                                    <p className="age">Từ 2 - 4 tuổi</p>
-                                </div>
-                                <div className="quantity-customer">
-                                    <p className="minor" onClick={handleChildrenMinor}>-</p>
-                                    <p className="count">{children}</p>
-                                    <p className="plus" onClick={handleChildrenPlus}>+</p>
-                                </div>
-                            </div>
-
-                            <div className="customer-type-quantity--item">
-                                <div className="customer-type">
-                                    <p className="customer-type-name">Em bé</p>
-                                    <p className="age">Dưới 2 tuổi</p>
-                                </div>
-                                <div className="quantity-customer">
-                                    <p className="minor" onClick={handleInfantMinor}>-</p>
-                                    <p className="count">{infant}</p>
-                                    <p className="plus" onClick={handleInfantPlus}>+</p>
-                                </div>
-                            </div>
+                            <CustomerQuantity
+                                    adult={adult}
+                                    children={children}
+                                    teen={teen}
+                                    infant={infant}
+                                    onAdultChange={setAdult}
+                                    onTeenChange={setTeen}
+                                    onChildrenChange={setChildren}
+                                    onInfantChange={setInfant}
+                                />
                         </div>
                     </div>
 
@@ -364,21 +331,6 @@ const BookingPage = () => {
                                     <>  
                                         <div className="customer-type">Thông tin hành khách #{index + 1}</div>
                                         <div className="form-information--container">
-                                            {/* <div className="infor-item customer-call-by">
-                                                <p className="infor-title">Danh xưng: </p>
-                                                <div className="radio-gender">
-                                                    <p>
-                                                        <input type="radio" name='gender' id='male' value={"Male"} />
-                                                        <label htmlFor="male">Ông</label>
-                                                    </p>
-
-                                                    <p>
-                                                        <input type="radio" name='gender' id='female' value={"Female"} />
-                                                        <label htmlFor="female">Bà</label>
-                                                    </p>
-                                                </div>
-                                            </div> */}
-
                                             <div className="infor-item first-name">
                                                 <p className="infor-title">Họ và tên: </p>
                                                 <input type="text" className="first-name--input" onChange={(event) => handleOnChangeName(event, index)}/>
@@ -400,26 +352,6 @@ const BookingPage = () => {
                         </div>
                            
                     </div>
-
-                    {/* <div className="more-request--container">
-                        <p className="title">Quý khách có thêm yêu cầu gì về khách sạn hãy nói với chúng tôi</p>
-                        <p className="description">Quý khách có yêu cầu đặc biệt? Gửi yêu cầu và khách sạn sẽ cố gắng đáp ứng nguyện vọng của Quý khách. Xin lưu ý yêu cầu đặc biệt không được bảo đảm trước và có thể thu phí</p>
-
-                        <div className="choice-request--container">
-                            <div className="choice-request--item">
-                                <p className="choice-title">Quy định hút thuốc (nếu có phòng)</p>
-                            </div>
-
-                            <div className="choice-request--item">
-                                <p className="choice-title">Chọn loại giường (nếu có phòng)</p>
-                            </div>
-
-                            <div className="choice-request--item">
-                                <p className="choice-title">Yêu cầu đặc biệt</p>
-                            </div>
-
-                        </div>
-                    </div> */}
                 </div>
 
                 <div className="choosen-tour--section">
